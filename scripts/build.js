@@ -89,7 +89,43 @@ async function build(target) {
     { stdio: 'inherit' },
   )
 
-  // TODO: use api-extractor
+  if (buildTypes && pkg.types) {
+    console.log()
+    console.log(
+      chalk.bold(chalk.yellow(`Rolling up type definitions for ${target}...`)),
+    )
+
+    // build types
+    const { Extractor, ExtractorConfig } = require('@microsoft/api-extractor')
+
+    const extractorConfigPath = path.resolve(pkgDir, 'api-extractor.json')
+    const extractotConfig =
+      ExtractorConfig.loadFileAndPrepare(extractorConfigPath)
+
+    const extractorResult = Extractor.invoke(extractotConfig, {
+      localBuild: true,
+      showVerboseMessages: true,
+    })
+
+    if (extractorResult.succeeded) {
+      // concat additional d.ts to rolled-up dts
+      const typesDir = path.resolve(pkgDir, 'types')
+      if (await fs.exists(typesDir)) {
+      }
+
+      console.log(
+        chalk.bold(chalk.green(`API Extractor completed successfully.`)),
+      )
+    } else {
+      console.error(
+        `API Extractor completed with ${extractorResult.errorCount} errors` +
+          ` and ${extractorResult.warningCount} warnings`,
+      )
+      process.exitCode = 1
+    }
+
+    // await fs.remove(`${pkgDir}/dist/packages`)
+  }
 }
 
 function checkAllSizes(targets) {

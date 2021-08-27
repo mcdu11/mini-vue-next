@@ -17,7 +17,7 @@
     "jsx": "preserve",
     // "lib": ["esnext", "dom"],
     // "types": ["node"],
-    // "rootDir": ".",
+    "rootDir": ".",
     // "paths": {
     //   "@vue/compat": ["packages/vue-compat/src"],
     //   "@vue/*": ["packages/*/src"],
