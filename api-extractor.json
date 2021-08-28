@@ -42,7 +42,7 @@
    *
    * SUPPORTED TOKENS: <projectFolder>, <packageName>, <unscopedPackageName>
    */
-  // "mainEntryPointFilePath": "<projectFolder>/lib/index.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/lib/index.d.ts",
   /**
    * A list of NPM package names whose exports should be treated as part of this package.
    *
@@ -127,7 +127,7 @@
      * SUPPORTED TOKENS: <projectFolder>, <packageName>, <unscopedPackageName>
      * DEFAULT VALUE: "<projectFolder>/etc/"
      */
-    "reportFolder": "<projectFolder>/temp/",
+    "reportFolder": "<projectFolder>/temp/"
     /**
      * Specifies the folder where the temporary report file is written.  The file name portion is determined by
      * the "reportFileName" setting.
