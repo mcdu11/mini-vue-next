@@ -1,7 +1,7 @@
 {
-  "name": "@vue/reactivity",
+  "name": "@mini-vue/reactivity",
   "version": "1.0.0",
-  "description": "@vue/reactivity",
+  "description": "@mini-vue/reactivity",
   "main": "index.js",
   "module": "dist/reactivity.esm-bundler.js",
   "types": "dist/reactivity.d.ts",
@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/vuejs/vue/issues"
   },
-  "homepage": "https://github.com/vuejs/vue/tree/dev/packages/reactivity#readme"
+  "homepage": "https://github.com/vuejs/vue/tree/dev/packages/reactivity#readme",
+  "dependencies": {
+    "@mini-vue/shared": "^1.0.0"
+  }
 }
