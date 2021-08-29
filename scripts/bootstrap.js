@@ -20,7 +20,7 @@ files.forEach(shortName => {
     return
   }
 
-  const name = shortName === 'vue' ? shortName : `@vue/${shortName}`
+  const name = shortName === 'mini-vue' ? shortName : `@mini-vue/${shortName}`
   const pkgPath = path.join(packagesDir, shortName, 'package.json')
   const pkgExists = fs.existsSync(pkgPath)
 

@@ -18,11 +18,11 @@
     // "lib": ["esnext", "dom"],
     // "types": ["node"],
     "rootDir": ".",
-    // "paths": {
-    //   "@vue/compat": ["packages/vue-compat/src"],
-    //   "@vue/*": ["packages/*/src"],
-    //   "vue": ["packages/vue/src"]
-    // }
+    "paths": {
+      // "@mini-vue/compat": ["packages/vue-compat/src"],
+      "@mini-vue/*": ["packages/*/src"],
+      // "mini-vue": ["packages/vue/src"]
+    }
   },
   "include": [
     // "packages/global.d.ts",

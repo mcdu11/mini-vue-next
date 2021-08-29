@@ -94,7 +94,7 @@ function createConfig(format, output, plugins = []) {
   const isNodeBuild = format === 'cjs'
   const isGlobalBuild = /global/.test(format)
   const isCompatBuild = !!packageOptions.compat
-  const isCompatPackage = pkg.name === '@vue/compat'
+  const isCompatPackage = pkg.name === '@mini-vue/compat'
 
   if (isGlobalBuild) {
     output.name = packageOptions.name
@@ -146,11 +146,11 @@ function createConfig(format, output, plugins = []) {
     external = [
       ...Object.keys(pkg.dependencies || {}),
       ...Object.keys(pkg.peerDependencies || {}),
-      ...['path', 'url', 'stream'], // for @vue/compiler-sfc / server-renderer
+      ...['path', 'url', 'stream'], // for @mini-vue/compiler-sfc / server-renderer
     ]
   }
 
-  // the browser builds of @vue/compiler-sfc requires postcss to be available
+  // the browser builds of @mini-vue/compiler-sfc requires postcss to be available
   // as a global (e.g. http://wzrd.in/standalone/postcss)
   output.globals = {
     postcss: 'postcss',

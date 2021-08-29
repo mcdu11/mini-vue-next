@@ -43,9 +43,9 @@ module.exports = {
   watchPathIgnorePatterns: ['/node_modules/', '/dist/', '/.git/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
-    '@vue/compat': '<rootDir>/packages/vue-compat/src',
-    '^@vue/(.*?)$': '<rootDir>/packages/$1/src',
-    vue: '<rootDir>/packages/vue/src',
+    '@mini-vue/compat': '<rootDir>/packages/vue-compat/src',
+    '^@mini-vue/(.*?)$': '<rootDir>/packages/$1/src',
+    'mini-vue': '<rootDir>/packages/vue/src',
   },
   rootDir: __dirname,
   testMatch: ['<rootDir>/packages/**/__tests__/**/*spec.[jt]s?(x)'],
